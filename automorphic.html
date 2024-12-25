@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 1s ease;
+    }
+  
+    button{
+        height: 100px;
+        font-size: 25px;
+        cursor: pointer;
+        width: 150px;
+        border-radius: 18px;
+        justify-content: center;
+        background-color: black;
+        color: white;
+    }
+   </style> 
+</head>
+<body>
+
+    <button onclick="changebackgroundcolor()">click me</button>
+  
+    <script>
+        let colors= ['salmon','red','green','blue','yellow'];
+        let currentColorIndex = 0;
+         
+        function changebackgroundcolor(){
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex +1) % colors.length;
+        }
+        // let n=76;
+        // let m = n*n;
+
+        // let rem1 = n%10;
+        // let rem2 = n%10;
+
+        // if(rem1 == rem2){
+        //     console.log("true");
+        // }
+        // else{
+        //     console.log("false");
+        // }
+
+        //  harshad number
+        
+        // let p = 18;
+        // let sum =0;
+        // let dummy = p;  //copy to dummy
+        // while(p !=0){
+        //     let rem = p % 10;
+        //     sum = sum +rem;
+        //     p = Math.floor(n/10);
+        // }
+        // if(dummy % sum == 0){
+        //     console.log("number is harshed");
+        // }
+        // else{
+        //     console.log("not harshed");
+        // }
+
+        // let n = 123456;
+        // let rsum = 0;
+        // let count = 0;
+        // let dummy=n;
+        // while(n != 0){
+        //     let rem = n % 10;+
+        //     count++;
+        //     n = Math.floor(n/10);
+        // }
+        // let half = Math.floor(count/2);
+
+        //  while(half != 0){
+        //      let rem = dummy%10;
+        //      rsum = rsum+ rem;
+        //      dummy = Math.floor(dummy/10);
+        //      half--;
+        //  }
+        //  console.log(rsum);
+
+    </script>
+</body>
+</html>

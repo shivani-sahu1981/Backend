@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(232, 172, 182);
+        }
+        .container{
+            margin: 0;
+            width: 300px;
+            height: 120px;
+            text-align: center;
+            background-color:rgb(247, 195, 203) ;
+        }
+        button{
+            width: 70px;
+            border-radius: 15px;
+            border: none;
+            color: white;
+            font-size: 15px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+
+<body>
+   <div class="container">
+    <div class="box">
+        <p id="para">Good morning</p>
+        <button onclick="incr()">+</button>
+        <button onclick="decr()">-</button>
+        <button onclick="res()">reset</button>
+        <p id="counter">0</p>
+    </div>
+   </div>
+   <script>
+    let counter = 0;
+    let a=60;
+    let b=2;
+
+    function incr(){
+      document.getElementById("counter").innerHTML = ++counter;
+      document.getElementById("para").style.fontSize = (a + counter * b) + px ;
+     
+    }
+    function decr(){
+      document.getElementById("counter").innerHTML = --counter;
+      document.getElementById("para").style.fontSize = (a + counter * b) + px;
+    }
+    function res(){
+      document.getElementById("counter").innerHTML =  counter=0;
+      document.getElementById("para").style.fontSize = a ;
+    }
+  </script>
+</body>
+</html>

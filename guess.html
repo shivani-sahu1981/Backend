@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess number</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(49, 197, 197);
+            justify-content: center;
+            margin-left: 250px;
+            margin-top: 250px;
+        }
+        .container{
+            margin: 0;
+            padding: 0;
+            height: 150px;
+            width: 350px;
+            border-radius: 18px;
+            background-color: rgb(48, 130, 130);
+            text-align: center;
+        }
+        .box{
+            margin: 5px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Guess the number!!!</h2>
+            <div class="innerbox">
+                <input type="number" id="number">
+                <button>Refresh</button>
+                <button onclick="guess()">Start</button>
+            </div>
+           <p id="ans"></p>
+           <p id="counter"></p>
+        </div>
+    </div>
+
+    <script>
+        let danish = Math.floor(Math.random()*10);
+        function guess(){
+            count--;
+            if(count==0){
+               return;
+            }
+            let counter = (document.getElementById("counter").value);
+
+            let number = parseInt(document.getElementById("number").value);
+
+            if(number == danish){
+                document.getElementById("ans").innerHTML="yupp you won the game";
+            }
+
+            else if ( number<danish){
+                alert("think higher number");
+            }
+
+            else{
+                alert("think lower number");
+            }
+        }
+console.log(5 + "3");
+
+    console.log("5" * "3");
+    </script>
+</body>
+</html>
+
+<!-- 5 + "3" ans= 8
+ "3 " + "5" =35
+ "3" * "5"=15
+ "5" + "3" + 8 = -->
