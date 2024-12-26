@@ -18,14 +18,36 @@
         .container{
             margin: 20px;
             padding: 20px;
+            width: 30
+            0px;
             height: 150px;
             border-radius: 20px;
             background-color: rgb(100, 33, 162);
             border: 2px solid;
+            text-align: center;
         }
 
         #head{
-            font-size: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #inputtext{
+            padding: 5px;
+            border: none;
+            border-radius: 10px;
+            width: 150px;
+        }
+
+        #QR{
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+            width: 200px;
+            height: 30px;
+            color: white;
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
         }
 
     </style>
@@ -33,11 +55,11 @@
 <body>
     <div class="container">
         <p id="head">Generate QR code</p>
-          <input id="inputtext" type="text" placeholder="name and url">
+          <input id="inputtext" type="text" placeholder="name and url"><br><br>
           <button onclick="generateqr()" id="QR">Generate</button> 
         <div class="image-container"> 
             <div id="qr">
-                <img src="" alt="" id="qrimg">
+                <img src="" alt="" id="qrimg"><br><br>
             </div>
         </div>
     </div>
@@ -50,3 +72,15 @@
     </script>
 </body>
 </html>
+
+<!-- let n =38;
+ while(n >= 10){
+ let sum=0;
+ while(n !=0){
+ let rem = n % 10;
+ sum = sum * rem;
+ n= = Math.floor(n/10);
+ }
+ n = sum;
+ }
+ console.log(n); -->
