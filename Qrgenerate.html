@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qr code generator</title>
     <style>
-        body{
+        *{
             margin: 0;
             padding: 0;
-            background-color: blueviolet;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: #001122;
+        }
+        .box{
+            background-color: #155e75;
+            padding: 30px;
+            width: 400px;
+            border-radius: 8px;
         }
 
         .container{
-            margin: 20px;
+            font-size: 26px;
+            text-align: center;
+            color: #fff;
+            margin-top: 24px;
+            text-transform: uppercase;
+            /* margin: 20px;
             padding: 20px;
             width: 30
             0px;
@@ -24,22 +40,44 @@
             border-radius: 20px;
             background-color: rgb(100, 33, 162);
             border: 2px solid;
-            text-align: center;
+            text-align: center; */
         }
 
-        #head{
+        .box .container #inputtext{
+            width: 100%;
+            margin-block: 12px;
+            padding: 8px;
+            border-radius: 8px;
+            outline: none;
+            border: 2px solid #7fb7c9;
+        }
+
+        .box .container #QR{
+            background-color: none;
+            text-decoration: none;
             font-size: 20px;
-            text-align: center;
+            padding: 14px 36px;
+            color: #155e75;
+            margin-inline: 2px;
+            font-weight: 600;
+            border-radius: 8px;
         }
 
-        #inputtext{
-            padding: 5px;
-            border: none;
-            border-radius: 10px;
-            width: 150px;
+        .box .container .image-container{
+            
         }
 
-        #QR{
+        .box .container .image-container #QR{
+            max-width: 100%;
+            max-height: 100%;
+            margin-block: 10px;
+            padding: 20px;
+            border: 0.5px solid #001122;
+            border-radius: 8px;
+            border-color: #fff;
+        }
+
+        /* #QR{
             border-radius: 10px;
             border: none;
             padding: 5px;
@@ -48,12 +86,13 @@
             color: white;
             background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-        }
+        } */
 
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="box">
+     <div class="container">
         <p id="head">Generate QR code</p>
           <input id="inputtext" type="text" placeholder="name and url"><br><br>
           <button onclick="generateqr()" id="QR">Generate</button> 
@@ -61,8 +100,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
             <div id="qr">
                 <img src="" alt="" id="qrimg"><br><br>
             </div>
-        </div>
+     </div>
     </div>
+</div>
     <script>
         let inputtext = document.getElementById("inputtext");
         let imageqr = document.getElementById("imageqr");
