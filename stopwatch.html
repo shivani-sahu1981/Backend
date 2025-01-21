@@ -7,14 +7,41 @@
     <link rel="stylesheet" href="stopwatch.css">
 </head>
 <body>
-    <div class="stopwatch">
+    <div class="stopwatch" id="stopwatch" >
         <div class="timerDisplay">00 : 00 : 00</div>
     </div>
 
     <div class="buttons">
-        <button id="stopBtn" class="btn" style="--clr:red;" >Stop</button>
-        <button id="startBtn" class="btn" style="--clr:green;" >Start</button>
-        <button id="resettBtn" class="btn" style="--clr:blue;" >Reset</button>
+        <button id="start" onclick="startTimer()" class="btn" style="--clr:green;" >Start</button>
+        <button id="stop" onclick="stopTimer()" class="btn" style="--clr:red;" >Stop</button>
+        <button id="reset" onclick="resetTimer()" class="btn" style="--clr:blue;" >Reset</button>
     </div>
+    <script>
+        let timer, seconds = 0;
+        const stopwatch = document.getElementById('stopwatch');
+
+        function updateTime() {
+            stopwatch.textContent = new Date(seconds * 1000).toISOString().substr(11, 8);
+        }
+
+        function startTimer(){
+            timer = setInterval(function(){
+                seconds++;
+                updateTime();
+            }, 1000);
+        }
+
+        function stopTimer(){
+            clearInterval(timer);
+        }
+
+        function resetTimer(){
+            clearInterval(timer);
+            seconds = 0;
+            updateTime();
+        }
+
+
+    </script>
 </body>
 </html>
