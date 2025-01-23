@@ -54,7 +54,7 @@ function displayError(message){
 }
 
 searchButton.addEventListener("click", () =>{
-    const username = username = usernameInput.apivalue.trim();
+    const username = usernameInput.value.trim();
     if (username){
         fetchGitHubProfile(username);
     }
